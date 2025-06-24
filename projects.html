@@ -11,11 +11,56 @@
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Custom CSS for project cards -->
+        <style>
+            /* Project Card Styling */
+            .card.project-card {
+                height: 300px; /* Fixed height for all cards */
+                display: flex;
+                align-items: stretch;
+            }
+            .card.project-card .card-body {
+                padding: 0;
+                display: flex;
+                flex: 1;
+            }
+            .card.project-card .d-flex {
+                flex: 1;
+            }
+            .card.project-card .p-5 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow: hidden;
+            }
+            .card.project-card .p-5 h2 {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .card.project-card .p-5 p {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3; /* Limit to 3 lines */
+                -webkit-box-orient: vertical;
+            }
+            .card.project-card img {
+                width: 200px; /* Fixed image width */
+                height: 100%; /* Fill the card height */
+                object-fit: cover; /* Ensure images are cropped uniformly */
+            }
+        </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
@@ -35,64 +80,41 @@
                 </div>
             </nav>
             <!-- Projects Section-->
-            <section id="projects" class="bg-light py-5">
-  <div class="container px-5 my-5">
-    <div class="text-center mb-5">
-      <h2 class="fw-bolder">Projects</h2>
-      <p class="lead mb-0">A selection of my recent work</p>
-    </div>
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-11 col-xl-9 col-xxl-8">
-
-        <!-- Project Card 1 -->
-        <div class="card h-100 overflow-hidden shadow rounded-4 border-0 mb-5">
-          <div class="row g-0 h-100">
-            <div class="col-md-6 d-flex flex-column p-5">
-              <h2 class="fw-bolder">Motor Bike Sales Excel Analysis</h2>
-              <p class="flex-grow-1">Analyzing Kaggle's Bike Sales dataset using Microsoft Excel with data cleaning, pivot tables, formulas, and an interactive dashboard to uncover business insights.</p>
-              <a class="btn btn-primary mt-3" href="https://github.com/YOUR_USERNAME/YOUR_REPO_LINK" target="_blank">View on GitHub</a>
-            </div>
-            <div class="col-md-6">
-              <img class="img-fluid h-100 w-100 object-fit-cover" src="https://i.pinimg.com/736x/c8/94/e4/c894e4a6db70a6ebd41d61db48473f75.jpg" alt="..." />
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div class="card h-100 overflow-hidden shadow rounded-4 border-0 mb-5">
-          <div class="row g-0 h-100">
-            <div class="col-md-6 d-flex flex-column p-5">
-              <h2 class="fw-bolder">Data Professional Survey Breakdown Dashboard</h2>
-              <p class="flex-grow-1">Designed an interactive dashboard to analyze and visualize insights from the Data Professional Survey, highlighting key trends in roles, tools, and salaries across the industry.</p>
-              <a class="btn btn-primary mt-3" href="https://github.com/Omar-Mahrous-am/Data-Professionals-Dashboard-Analysis" target="_blank">View on GitHub</a>
-            </div>
-            <div class="col-md-6">
-              <img class="img-fluid h-100 w-100 object-fit-cover" src="https://i.pinimg.com/736x/95/fe/7a/95fe7a6efd8ed2054a5552dda2d78731.jpg" alt="Dashboard Image" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 3 -->
-        <div class="card h-100 overflow-hidden shadow rounded-4 border-0 mb-5">
-          <div class="row g-0 h-100">
-            <div class="col-md-6 d-flex flex-column p-5">
-              <h2 class="fw-bolder">Movie Recommender System</h2>
-              <p class="flex-grow-1">Analyzed user ratings and movie features to develop a personalized Movie Recommender System using collaborative filtering and content-based methods.</p>
-              <a class="btn btn-primary mt-3" href="https://github.com/YOUR_USERNAME/YOUR_REPO_LINK" target="_blank">View on GitHub</a>
-            </div>
-            <div class="col-md-6">
-              <img class="img-fluid h-100 w-100 object-fit-cover" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*x0ccl7G6JeCCSG07.jpg" alt="..." />
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-                <!-- Project Card 3-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+            <section class="py-5">
+                <div class="container px-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-11 col-xl-9 col-xxl-8">
+                            <!-- Project Card 1-->
+                            <div class="card project-card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Motor Bike Sales Excel Analysis</h2>
+                                            <p>Analyzing Kaggle's Bike Sales dataset using Microsoft Excel with data cleaning, pivot tables, formulas, and an interactive dashboard to uncover business insights.</p>
+                                            <a class="btn btn-primary" href="https://github.com/YOUR_USERNAME/YOUR_REPO_LINK" target="_blank">View on GitHub</a>
+                                        </div>
+                                        <img class="img-fluid" src="https://i.pinimg.com/736x/c8/94/e4/c894e4a6db70a6ebd41d61db48473f75.jpg" alt="..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 2-->
+                            <div class="card project-card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Data Professional Survey Breakdown Dashboard</h2>
+                                            <p>Designed an interactive dashboard to analyze and visualize insights from the Data Professional Survey, highlighting key trends in roles, tools, and salaries across the industry.</p>
+                                            <a class="btn btn-primary" href="https://github.com/Omar-Mahrous-am/Data-Professionals-Dashboard-Analysis" target="_blank">View on GitHub</a>
+                                        </div>
+                                        <img class="img-fluid" src="https://i.pinimg.com/736x/95/fe/7a/95fe7a6efd8ed2054a5552dda2d78731.jpg" alt="Dashboard Image" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 3-->
+                            <div class="card project-card overflow-hidden shadow rounded-4 border-0 mb-5">
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5">
@@ -104,6 +126,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- Call to action section-->
             <section class="py-5 bg-gradient-primary-to-secondary text-white">
@@ -119,12 +144,12 @@
         <footer class="bg-white py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Omar Mahrous</div></div>
+                    <div class="col-auto"><div class="small m-0">Copyright © Omar Mahrous</div></div>
                     <div class="col-auto">
                         <a class="small" href="#!">Privacy</a>
-                        <span class="mx-1">&middot;</span>
+                        <span class="mx-1">·</span>
                         <a class="small" href="#!">Terms</a>
-                        <span class="mx-1">&middot;</span>
+                        <span class="mx-1">·</span>
                         <a class="small" href="#!">Contact</a>
                     </div>
                 </div>
