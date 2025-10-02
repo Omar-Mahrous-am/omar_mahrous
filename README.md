@@ -64,7 +64,7 @@ A simple landing page introducing myself.
 ## 📎 Resume
 
 - You can view my resume directly on the website.
-- [Download Resume (PDF)](https://drive.google.com/uc?export=download&id=1KljtdS7rkaHqXurSFS-ZZYg3SXKSW_2N)
+- [Download Resume (PDF)](https://drive.google.com/uc?export=download&id=1_10X7L1ISCvLdZzqxgEMpWaaUypLnw6o)
 
 ---
 
